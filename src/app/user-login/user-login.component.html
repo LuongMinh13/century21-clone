@@ -1,0 +1,43 @@
+<form #f="ngForm" (ngSubmit)="onSubmit()">
+
+    <!-- <p>Form value: {{ f.value | json }}</p>
+    <p>Form valid: {{ f.valid }}</p> -->
+    <div class="mb-3">
+      <label for="loginUsername" class="form-label">User</label>
+      <input type="text" 
+             name="username" 
+             ngModel 
+             required 
+             class="form-control " 
+             id="loginUsername" 
+             placeholder="Enter username"
+             [(ngModel)]='username'>
+             <!-- <p>username value: {{ username.value }}</p>
+             <p>username valid: {{ username.valid }}</p>
+             <p>username dirty: {{ username.dirty }}</p>
+             <p>username touched: {{ username.touched }}</p> -->
+    </div>
+    <div class="mb-3">
+      <label for="loginPassword" class="form-label">Password</label>
+      <input type="password" 
+             name="password" 
+             ngModel 
+             required 
+
+             class="form-control" 
+             id="loginPassword" 
+             placeholder="Enter your password"
+             [(ngModel)]='password'>
+             <!-- <p>password value: {{ password.value }}</p>
+             <p>password valid: {{ password.valid }}</p>
+             <p>password dirty: {{ password.dirty }}</p>
+             <p>password touched: {{ password.touched }}</p> -->
+    </div>
+    <div class="mb-3 form-check">
+      <a [routerLink] = "'resetpassword'">Forgot password</a>
+    </div>
+    <button type="submit"  class="btn btn-primary" >
+      Submit
+    </button>
+
+  </form>

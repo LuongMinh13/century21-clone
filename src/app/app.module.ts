@@ -9,6 +9,7 @@ import { UserLoginComponent } from './user-login/user-login.component';
 import { HomeComponent } from './home/home.component';
 import { LogoutComponent } from './logout/logout.component';
 import { StorageServiceModule } from 'ngx-webstorage-service';
+import { ProductsComponent } from './products/products.component';
 
 
 @NgModule({
@@ -18,6 +19,7 @@ import { StorageServiceModule } from 'ngx-webstorage-service';
     UserLoginComponent,
     HomeComponent,
     LogoutComponent,
+    ProductsComponent,
   ],
   imports: [
     BrowserModule,

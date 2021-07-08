@@ -1,0 +1,22 @@
+<div class='table-responsive'>
+    <table class='table' *ngIf='products.length'>
+        <thead>
+            <tr>
+                <th>Image</th>
+                <th>Product</th>
+                <th>Description</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor='let product of products'>
+                <td>
+                    <img [src]='product.imageUrl' [style.width.px]='imageWidth' [style.margin.px]='imageMargin' [style.height.px] ='imageHeight'>
+                </td>
+                <td>{{product.productName}}</td>
+                <td>{{product.description}}</td>
+                <td>{{product.prix}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,4 +1,4 @@
-<div class='table-responsive'>
+<div *ngIf="Username" class='table-responsive'>
     <table class='table' *ngIf='products.length'>
         <thead>
             <tr>
@@ -19,4 +19,7 @@
             </tr>
         </tbody>
     </table>
+</div>
+<div *ngIf="!Username" >
+    <p>Veillez vous connecter pour voir les product</p>
 </div>

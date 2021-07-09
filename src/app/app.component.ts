@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { empty } from 'rxjs';
 import { UserService } from './service/user.service';
 
 @Component({
@@ -11,10 +10,8 @@ import { UserService } from './service/user.service';
 
 export class AppComponent {
   constructor(private userservice : UserService, private router: Router){}
-  
   title = 'century21-clone';
   Username : string = "";
-  users: UserService[] = [];
 
 
   onactivate(){
@@ -32,7 +29,9 @@ export class AppComponent {
 
   onLogout(){
     this.userservice.username = '';
-    this.router.navigate(['/login']);
+    // localStorage.removeItem('users');
+    this.router.navigate(['']);
+    // location.reload();
   }
   
 

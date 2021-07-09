@@ -26,7 +26,7 @@ export class UserLoginComponent implements OnInit {
     // console.log(f.valid);  // false
     // console.log(this.username, this.password);
     this.userservice.username = this.username;
-    this.router.navigate(['/']);
+    this.router.navigate(['/product']);
   }
 
 

@@ -12,6 +12,7 @@ export class HomeComponent implements OnInit {
   constructor(private userservice : UserService) { }
 
   public username = this.userservice.username
+  
   ngOnInit(): void {
   }
 
